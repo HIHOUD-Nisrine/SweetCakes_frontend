@@ -1,0 +1,191 @@
+
+/* Custom Scrool-bar */
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #4ACC64;
+    border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #3BA550;
+}
+/* Custom Scrool-bar */
+
+
+
+/* custom select */        
+.select-css {
+    display: block;
+    font-size: 16px;
+    padding: .6em 1.4em .5em .8em;
+    width: 100%;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
+    box-shadow:3px 5px 8px rgba(0,0,0,0.2);
+    border-radius: 25px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: white;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23C59BF9%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%;
+    background-size: .65em auto;
+}
+/* Hide arrow icon in IE browsers */
+.select-css::-ms-expand {
+    display: none;
+}
+/* Hover style */
+.select-css:hover {
+    border-color: #888;
+}
+/* Focus style */
+.select-css:focus {
+    border-color: #F6F6F6;
+    color: #222; 
+    outline: none;
+}
+/* custom select */        
+
+/* custom checkbox */        
+
+/* check box */
+.checkBox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: -15px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+
+/* Create a custom checkbox */
+
+/* Hide the browser's default checkbox */
+.checkBox-container input {
+    display: none;
+}
+
+.checkBox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    box-shadow:3px 5px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a grey background color */
+.checkBox-container:hover input ~ .checkmark {
+    background-color: #F6F6F6;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkBox-container input:checked ~ .checkmark {
+    background-color: #AB7CF7;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkBox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkBox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkBox-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/* custom checkbox */        
+
+
+/* input type file */
+.file-upload .file-upload-select {
+    width: 300px;
+    display: block;
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    background: #AB7CF7;
+    overflow: hidden;
+    position: relative;
+    border-radius: 6px;
+}
+.file-upload .file-upload-select .file-select-button {
+    background: #C59BF9;
+    padding: 10px;
+    display: inline-block;
+}
+.file-upload .file-upload-select .file-select-name {
+    display: inline-block;
+    padding: 10px;
+}
+.file-upload .file-upload-select:hover .file-select-button {
+    background: #7121f1;
+    color: #ffffff;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+.file-upload .file-upload-select input[type="file"] {
+    display: none;
+}
+/* input type file */
+
+
+/* slick slider if we need it*/
+.custom-dot{
+    position: absolute;
+    top: -25px;
+    z-index: 10;
+    color: gray;
+    font-size: 5px;
+    transition: .3s ease-in-out;
+}
+
+li.slick-active .custom-dot, .custom-dot:hover{
+    font-size: 8px;
+    color: #C59BF9;
+}
+
+.cunstom-dot-active{
+    font-size: 10px;
+    color: #AB7CF7;
+}
+/* slick slider if we need it*/

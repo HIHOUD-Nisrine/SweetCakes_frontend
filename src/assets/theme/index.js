@@ -7,6 +7,7 @@ export const COLORS = {
         primary: "#F84267",
         hover: "#FE0135",
     },
+    lightPurple:"#E4D8F3",
     gray: "#9F9F9F",
     white: "#ffff",
     inputFocus: "#DFD4F24c",

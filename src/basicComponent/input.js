@@ -33,7 +33,7 @@ const InputS = styled.input`
 `;
 
 
-const Input = ({ label, type = "text", name, data, setData, disabled = false, width, icon = "", placeholder = "", onClickIcon }) => {
+const Input = ({ label, type = "text", name, data, setData, disabled = false, width, step,icon = "", placeholder = "", onClickIcon }) => {
 
     const updateValue = (e) => {
         setData({
@@ -65,6 +65,7 @@ const Input = ({ label, type = "text", name, data, setData, disabled = false, wi
                 name={name}
                 disabled={disabled ? "disabled" : ""}
                 placeholder={placeholder}
+                step={step}
             />
 
             {icon !== "" ?

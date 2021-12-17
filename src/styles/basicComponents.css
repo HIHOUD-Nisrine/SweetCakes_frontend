@@ -1,40 +1,78 @@
-
-/* Custom Scrool-bar */
 /* width */
+
+#promo-outer {
+    width: 100%;
+    height: 50px;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 5px 10px #767676;
+}
+
+#promo-outer #promo-inner {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    line-height: 50px;
+}
+
+#promo-tab {
+    background: lightgray;
+    color: #505050;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bolder;
+    position: fixed;
+    top: 0;
+    right: 10px;
+    border: 1px solid #bababa;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
 }
-  
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
     background: #ffffff;
 }
 
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #4ACC64;
     border-radius: 25px;
 }
 
+
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #3BA550;
 }
+
+
 /* Custom Scrool-bar */
 
 
+/* custom select */
 
-/* custom select */        
 .select-css {
     display: block;
     font-size: 16px;
     padding: .6em 1.4em .5em .8em;
     width: 100%;
-    max-width: 100%; /* useful when width is set to anything other than 100% */
+    max-width: 100%;
+    /* useful when width is set to anything other than 100% */
     box-sizing: border-box;
     margin: 0;
     border: none;
-    box-shadow:3px 5px 8px rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -45,25 +83,39 @@
     background-position: right .7em top 50%;
     background-size: .65em auto;
 }
+
+
 /* Hide arrow icon in IE browsers */
+
 .select-css::-ms-expand {
     display: none;
 }
+
+
 /* Hover style */
+
 .select-css:hover {
     border-color: #888;
 }
+
+
 /* Focus style */
+
 .select-css:focus {
     border-color: #F6F6F6;
-    color: #222; 
+    color: #222;
     outline: none;
 }
-/* custom select */        
 
-/* custom checkbox */        
+
+/* custom select */
+
+
+/* custom checkbox */
+
 
 /* check box */
+
 .checkBox-container {
     display: block;
     position: relative;
@@ -78,10 +130,11 @@
 }
 
 
-
 /* Create a custom checkbox */
 
+
 /* Hide the browser's default checkbox */
+
 .checkBox-container input {
     display: none;
 }
@@ -93,33 +146,43 @@
     height: 25px;
     width: 25px;
     background-color: white;
-    box-shadow:3px 5px 8px rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 8px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }
 
+
 /* On mouse-over, add a grey background color */
-.checkBox-container:hover input ~ .checkmark {
+
+.checkBox-container:hover input~.checkmark {
     background-color: #F6F6F6;
 }
 
+
 /* When the checkbox is checked, add a blue background */
-.checkBox-container input:checked ~ .checkmark {
+
+.checkBox-container input:checked~.checkmark {
     background-color: #AB7CF7;
 }
 
+
 /* Create the checkmark/indicator (hidden when not checked) */
+
 .checkBox-container .checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
+
 /* Show the checkmark when checked */
-.checkBox-container input:checked ~ .checkmark:after {
+
+.checkBox-container input:checked~.checkmark:after {
     display: block;
 }
 
+
 /* Style the checkmark/indicator */
+
 .checkBox-container .checkmark:after {
     left: 9px;
     top: 5px;
@@ -131,10 +194,13 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-/* custom checkbox */        
+
+
+/* custom checkbox */
 
 
 /* input type file */
+
 .file-upload .file-upload-select {
     width: 300px;
     display: block;
@@ -146,15 +212,18 @@
     position: relative;
     border-radius: 6px;
 }
+
 .file-upload .file-upload-select .file-select-button {
     background: #C59BF9;
     padding: 10px;
     display: inline-block;
 }
+
 .file-upload .file-upload-select .file-select-name {
     display: inline-block;
     padding: 10px;
 }
+
 .file-upload .file-upload-select:hover .file-select-button {
     background: #7121f1;
     color: #ffffff;
@@ -163,14 +232,18 @@
     -webkit-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
 }
+
 .file-upload .file-upload-select input[type="file"] {
     display: none;
 }
+
+
 /* input type file */
 
 
 /* slick slider if we need it*/
-.custom-dot{
+
+.custom-dot {
     position: absolute;
     top: -25px;
     z-index: 10;
@@ -179,13 +252,16 @@
     transition: .3s ease-in-out;
 }
 
-li.slick-active .custom-dot, .custom-dot:hover{
+li.slick-active .custom-dot,
+.custom-dot:hover {
     font-size: 8px;
     color: #C59BF9;
 }
 
-.cunstom-dot-active{
+.cunstom-dot-active {
     font-size: 10px;
     color: #AB7CF7;
 }
+
+
 /* slick slider if we need it*/

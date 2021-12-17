@@ -180,34 +180,36 @@ function Cakes() {
         </form>
         <div className="wrapper">
         {cakes.filter((val)=>{
+            if(search.category==="Choose"||search.event==="Choose" || search.disponibility==="Choose"){
+                return val}
             //Case no select no search
-            if(search.category==""&&search.event=="" && search.disponibility==""){
+            if(search.category===""&&search.event==="" && search.disponibility===""){
                 return val}
             //Case  just 1 select 
-            if(search.category!="" && search.event==""&&search.disponibility==""){
-                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase())){
+            if(search.category!="" && search.event===""&&search.disponibility===""){
+                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase())){
                 return val}}
 
-            if(search.category=="" && search.event!=""&&search.disponibility==""){
-                if((val.evenement.toLowerCase()==(search.event).toLocaleLowerCase())){
+            if(search.category==="" && search.event!=""&&search.disponibility===""){
+                if((val.evenement.toLowerCase()===(search.event).toLocaleLowerCase())){
                     return val}}
             
-            if(search.category=="" && search.event==""&&search.disponibility!=""){
-                if(val.dispo==(search.disponibility=='Oui'?'1':'0')){
+            if(search.category==="" && search.event===""&&search.disponibility!=""){
+                if(val.dispo===(search.disponibility==='Oui'?'1':'0')){
                     return val}}
             //Case  2 select 
-            if(search.category!="" && search.event!=""&&search.disponibility==""){
-                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase()) && (val.evenement.toLowerCase()==((search.event).toLocaleLowerCase()))){
+            if(search.category!="" && search.event!=""&&search.disponibility===""){
+                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase()) && (val.evenement.toLowerCase()===((search.event).toLocaleLowerCase()))){
                 return val}}
-            if(search.category!="" && search.event==""&&search.disponibility!=""){
-                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase()) &&(val.dispo==(search.disponibility=='Oui'?'1':'0'))){
+            if(search.category!="" && search.event===""&&search.disponibility!=""){
+                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase()) &&(val.dispo===(search.disponibility==='Oui'?'1':'0'))){
                  return val}}
-            if(search.category=="" && search.event!=""&&search.disponibility!=""){
-                if((val.dispo==(search.disponibility=='Oui'?'1':'0')) && (val.evenement.toLowerCase()==((search.event).toLocaleLowerCase()))){
+            if(search.category==="" && search.event!=""&&search.disponibility!=""){
+                if((val.dispo===(search.disponibility==='Oui'?'1':'0')) && (val.evenement.toLowerCase()===((search.event).toLocaleLowerCase()))){
                     return val}}
             //Case  3 select 
             if(search.category!="" && search.event!=""&&search.disponibility!=""){
-                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase()) &&(val.dispo==(search.disponibility=='Oui'?'1':'0')) && (val.evenement.toLowerCase().includes((search.event).toLocaleLowerCase()))){
+                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase()) &&(val.dispo===(search.disponibility==='Oui'?'1':'0')) && (val.evenement.toLowerCase().includes((search.event).toLocaleLowerCase()))){
                 return val}}
             
         } ).slice(pagesVisited, pagesVisited + cakesPerPage).map((val,key)=>{

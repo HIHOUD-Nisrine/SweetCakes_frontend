@@ -19,7 +19,6 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import UsSection from "./usSection";
 import { Button,Marginer,SectionTitle } from '../../basicComponents';
 import axios from 'axios';
-import '../../styles/home.css'
 
 const Box = styled.div`
   padding: 18px 60px;

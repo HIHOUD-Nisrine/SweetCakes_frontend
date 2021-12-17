@@ -72,7 +72,7 @@ const AddPosts = () => {
     // }
 
     const options = {
-        "categories": ["Tarte", "Cupcake", "Magnum", "Popcake", "Lolipop", "Sable"],
+        "categories": ["Cakes","Cupcakes","Magnum","Popcakes","Sable","Lolipops"],
         "gout": ["Chockolat", "Vanille", "Franboise"],
         "nbPiece": [4, 6, 12],
         "evenement": ["Mariage", "Anniversaire", "Fiancaille"],
@@ -83,7 +83,7 @@ const AddPosts = () => {
     }
 
     const [data, setData] = useState({
-        'categorie': 'Tarte',
+        'categorie': 'Cakes',
         'evenement': '',
         'prix': '',
         'poids': 0,
@@ -340,11 +340,11 @@ const AddPosts = () => {
                 </SectionName>
                 <Select label="Catégorie" options={options.categories} width="220px" name="categorie" data={data} setData={setData} />
                 <form onSubmit={(e) => addArticles(e)}>
-                    {data.categorie === "Tarte" && (CategorieCake())}
-                    {data.categorie === "Cupcake" && (CategorieCupcake())}
+                    {data.categorie === "Cakes" && (CategorieCake())}
+                    {data.categorie === "Cupcakes" && (CategorieCupcake())}
                     {data.categorie === "Magnum" && (CategorieMagnum())}
-                    {data.categorie === "Lolipop" && (CategorieLolipops())}
-                    {data.categorie === "Popcake" && (CategoriePopCakes())}
+                    {data.categorie === "Lolipops" && (CategorieLolipops())}
+                    {data.categorie === "Popcakes" && (CategoriePopCakes())}
                     {data.categorie === "Sable" && (CategorieSable())}
                     {data.categorie !== "Choose" &&
                         <Button text="Ajouter" width="150px" bgColor={COLORS.purple} textColor={COLORS.white} type="submit" />

@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
-
+import React, { useState } from "react";
 import styled from "styled-components";
-import { Input, Button,Select} from "../../basicComponent";
-import { Marginer } from "../../basicComponent/marginer";
+import { Input, Button,Select,Marginer,TextArea } from '../../basicComponents';
 import { COLORS } from "../../assets/theme";
-import TextArea from '../../basicComponent/textArea';
 import axios from 'axios';
-import { colors } from "@material-ui/core";
-import { color } from "@mui/system";
-//import { Select } from "@mui/material";
 
 
 const MainContainer = styled.div`
@@ -100,7 +94,7 @@ export default function FormLivr(props) {
 
     const [data, setData] = useState({
       "notes": "null",
-      "statut": 0,
+      "statut": 'non traité',
       "prix": 40
     });
 

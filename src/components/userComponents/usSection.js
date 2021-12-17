@@ -5,8 +5,7 @@ import aya from "../../assets/images/profiles/Anssaien.jpeg";
 import nisrine from "../../assets/images/profiles/Niss.jpeg";
 import chaymae from "../../assets/images/profiles/Mestour.jpeg";
 import oussama from "../../assets/images/profiles/oussama.jpg";
-import { SectionTitle } from '../../basicComponent/sectionTitle';
-import { Marginer } from "../../basicComponent/marginer";
+import { Marginer,SectionTitle } from '../../basicComponents';
 
 
 const Container = styled.div`

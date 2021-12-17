@@ -2,14 +2,13 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Navbar from "./Navbar";
 import '../../index.css';
-import { Marginer } from "../../basicComponent/marginer";
-import Button from "../../basicComponent/button";
 import BackgroundImg from "../../assets/images/livraison.jpg";
 import { COLORS } from "../../assets/theme";
 import Logo from "../../assets/images/logo.png";
 import { ReviewsSection } from "../userComponents/reviewsSection";
-import { SectionTitle } from "../../basicComponent/sectionTitle";
 import FormLivr from "./formLivr";
+import { Button,Marginer,SectionTitle } from '../../basicComponents';
+
 
 
 const Box = styled.div`

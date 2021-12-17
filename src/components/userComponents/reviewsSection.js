@@ -2,10 +2,9 @@ import { CarouselProvider, DotGroup, Slide, Slider } from "pure-react-carousel";
 import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
-import { Marginer } from "../../basicComponent/marginer";
-import { ReviewCard } from "../../basicComponent/reviewCard";
-import { SectionTitle } from "../../basicComponent/sectionTitle";
 import { useMediaQuery } from "react-responsive";
+import { ReviewCard,Marginer,SectionTitle } from '../../basicComponents';
+
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 

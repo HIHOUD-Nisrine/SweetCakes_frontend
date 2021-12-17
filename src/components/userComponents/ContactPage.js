@@ -1,16 +1,12 @@
 import React, { useState,useRef } from 'react';
 import styled from 'styled-components';
-import { SectionTitle } from '../../basicComponent/sectionTitle';
-import Button from '../../basicComponent/button';
-import Input from '../../basicComponent/input';
-import TextArea from '../../basicComponent/textArea';
 import { COLORS } from "../../assets/theme";
 import emailjs,{ init } from "emailjs-com";
-
+import { Input, Button,TextArea,SectionTitle,ContactItem } from '../../basicComponents';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-import ContactItem from '../../basicComponent/ContactItem';
+
 
 function ContactPage() {
 

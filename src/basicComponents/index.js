@@ -8,5 +8,9 @@ import UpdateFile from "./updateFile";
 import Slideshow from "./slideshow";
 import ProtectedRoute from "./protectedRoute";
 import Loader from "./loader";
+import ContactItem from './ContactItem';
+import {Marginer} from './marginer';
+import {ReviewCard} from './reviewCard';
+import {SectionTitle} from './sectionTitle'
 
-export { Input, Select, TextArea, Button, UploadFile, Slideshow, ProtectedRoute,Loader,UploadFile1 ,UpdateFile};
+export { Input, Select, TextArea, Button, UploadFile, Slideshow, ProtectedRoute,Loader,UploadFile1 ,UpdateFile,ContactItem,Marginer,ReviewCard,SectionTitle};

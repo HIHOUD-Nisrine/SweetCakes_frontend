@@ -1,9 +1,6 @@
 import React,{useEffect,useState} from "react";
 import styled, { css } from "styled-components";
 import Navbar from "./Navbar";
-import '../../index.css';
-import { Marginer } from "../../basicComponent/marginer";
-import Button from "../../basicComponent/button";
 import BackgroundImg from "../../assets/images/back1.png";
 import { COLORS } from "../../assets/theme";
 import Logo from "../../assets/images/logo.png";
@@ -14,14 +11,13 @@ import Magnum from "../../assets/images/magnum.jpeg";
 import Idk from "../../assets/images/idk.jpeg";
 import PopCake from "../../assets/images/popcake.jpeg";
 import { ReviewsSection } from "../userComponents/reviewsSection";
-import { SectionTitle } from "../../basicComponent/sectionTitle";
 import Contact from "./ContactPage";
 import Services from "./services";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import UsSection from "./usSection";
-import '../../styles/basicComponents.css';
+import { Button,Marginer,SectionTitle } from '../../basicComponents';
 import axios from 'axios';
 
 

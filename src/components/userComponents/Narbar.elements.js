@@ -8,7 +8,6 @@ export const Container = styled.div `
   border-bottom-right-radius: 30px 30px;
   box-shadow: 8px 8px 15px rgba(0,0,0,0.28);
 
-
 `;
 
 export const Wrapper = styled.div `
@@ -19,6 +18,7 @@ export const Wrapper = styled.div `
   flex-wrap: wrap;
   justify-content: space-between;
   margin: auto;
+  
 `;
 
 export const LogoContainer = styled.div `

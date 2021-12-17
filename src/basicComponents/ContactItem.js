@@ -20,7 +20,7 @@ function ContactItem({title, icon, cont1, cont2}) {
 }
 
 const ContactItemStyled = styled.div`
-    padding:1.5rem 2rem;
+    padding:0rem 10rem;
     background-color: "#C59BF9";
     display: flex;
     
@@ -47,11 +47,7 @@ const ContactItemStyled = styled.div`
     .right-content{
         h6{
             color: var(--white-color);
-            font-size: 1.2rem;
-            padding-bottom: .6rem;
-        }
-        p{
-            padding: .1rem 0;
+            font-size: 1rem;
         }
     }
 `;

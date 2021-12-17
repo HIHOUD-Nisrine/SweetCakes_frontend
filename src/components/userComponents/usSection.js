@@ -95,6 +95,7 @@ const Chaymae = styled.img`
   border-radius:50%;
 `;
 const HorizontalRule = styled.hr`
+margin:0;
 width:12%;
 height: 0.31rem;
 border-radius: 0.8rem;

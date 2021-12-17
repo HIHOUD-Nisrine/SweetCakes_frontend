@@ -74,12 +74,11 @@ const InnerLayout = styled.div`
 
 const ContactPageStyled = styled.section`
 
+
 display: flex;
-justify-content: space-around;
     .contact-section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 2rem;
         @media screen and (max-width: 978px){
             grid-template-columns: repeat(1, 1fr);
             .f-button{
@@ -87,7 +86,6 @@ justify-content: space-around;
             }
         }
         .right-content{
-            display: grid;
             grid-template-columns: repeat(1, 1fr);
             @media screen and (max-width: 502px){
                 width: 70%;
@@ -96,8 +94,6 @@ justify-content: space-around;
         .contact-title{
             h4{
                 color: var(--white-color);
-                padding: 1rem 0;
-                font-size: 1.8rem;
             }
         }
         .form{
@@ -132,7 +128,7 @@ justify-content: space-around;
                     border: 1px solid var(--border-color);
                     outline: none;
                     color: inherit;
-                    width: 100%;
+                    width: 60%;
                     padding: .8rem 1rem;
                 }
             }

@@ -1,0 +1,151 @@
+.modalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .modalContainer {
+    width: 800px;
+    height: 540px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px;
+    background-color: rgb(229, 234, 236);
+  }
+  
+   .title {
+    display: flex;
+    position: relative;
+    justify-content: center;   
+    width: 360px;
+    margin-top: 4px;
+   
+    
+  }
+  .title23 {
+    padding-left: 4px;
+    margin-top: -4px;
+   
+  }
+  
+  .form23{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: row;
+    
+                                   flex-wrap: wrap;
+                                 justify-content:flex-start;
+                                 margin-left: 10px;
+                                 margin-top: -43px;
+                        
+    
+    
+}
+.form33{
+    
+  display: flex;
+  align-items: flex-start;
+  justify-content: row;
+  
+                                 flex-wrap: wrap;
+                               justify-content:flex-start;
+                               margin-left: 10px;
+                               margin-top: -19px;
+                      
+  
+  
+}
+.form32{
+    
+    display: flex;
+    align-items: flex-start;
+    justify-content: row;
+    
+                                   flex-wrap: wrap;
+                                 justify-content:flex-start;
+                                 margin-left: 10px;
+                                 margin-top: -18px;
+                        
+    
+    
+}
+.form3{
+    
+  display: flex;
+  align-items: flex-start;
+  justify-content: row;
+  
+                                 flex-wrap: wrap;
+                               justify-content:flex-start;
+                               margin-left: 10px;
+                               margin-top: -18px;
+                      
+  
+  
+}
+  .titleCloseBtn {
+  margin-left: 400px;
+    margin-top: -20px;
+  }
+  
+  .titleCloseBtn button {
+    background-color: transparent;
+    border: none;
+    color: #AB7CF7;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .modalContainer .body {
+    flex: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+   
+  }
+  
+  .modalContainer .footer {
+    flex: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer .footer button {
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #cancelBtn {
+    background-color: crimson;
+  }
+ 
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+  .openModalBtn {
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 6px;
+    background-color: cornflowerblue;
+    color: white;
+    cursor: pointer;
+   
+  }

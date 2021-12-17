@@ -11,6 +11,7 @@ import Loader from "./loader";
 import ContactItem from './ContactItem';
 import {Marginer} from './marginer';
 import {ReviewCard} from './reviewCard';
-import {SectionTitle} from './sectionTitle'
+import {SectionTitle} from './sectionTitle';
+import Card from './card';
 
-export { Input, Select, TextArea, Button, UploadFile, Slideshow, ProtectedRoute,Loader,UploadFile1 ,UpdateFile,ContactItem,Marginer,ReviewCard,SectionTitle};
+export { Input, Select, TextArea, Button, UploadFile, Slideshow, ProtectedRoute,Loader,UploadFile1 ,UpdateFile,ContactItem,Marginer,ReviewCard,SectionTitle,Card};

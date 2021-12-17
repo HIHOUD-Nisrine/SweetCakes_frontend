@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { COLORS } from "../assets/theme";
 import styled from "styled-components";
 import axios from "axios";

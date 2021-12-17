@@ -3,7 +3,7 @@ import React from "react";
 import { Element } from "react-scroll";
 import styled from "styled-components";
 import { useMediaQuery } from "react-responsive";
-import { ReviewCard,Marginer,SectionTitle } from '../../basicComponents';
+import { ReviewCard,Marginer } from '../../basicComponents';
 
 
 import "pure-react-carousel/dist/react-carousel.es.css";

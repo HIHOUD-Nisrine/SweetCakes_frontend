@@ -66,7 +66,7 @@ const Input = ({ label, type = "text", name, data, setData, disabled = false, wi
                 disabled={disabled ? "disabled" : ""}
                 placeholder={placeholder}
                 step={step}
-            />
+                min="0"/>
 
             {icon !== "" ?
 
@@ -76,7 +76,7 @@ const Input = ({ label, type = "text", name, data, setData, disabled = false, wi
                         position: "absolute",
                         right: "10px",
                         bottom: "8px",
-                        color: COLORS.lightGreen.primary,
+                        color: COLORS.purple.primary,
                         fontSize: 20,
                         cursor: "pointer",
 
@@ -85,6 +85,24 @@ const Input = ({ label, type = "text", name, data, setData, disabled = false, wi
                     className={`fas fa-${icon}`}></i>
 
                 : <> </>
+            }
+            
+            {
+                type === "color" && (
+                    <div
+                        style={{
+                            position: "absolute",
+                            right: "-30px",
+                            bottom: "0px",
+                            width:"22px",
+                            height:"22px",
+                            borderRadius:"50%",
+                            backgroundColor:data[name],
+                            boxShadow:"3px 5px 8px rgba(0,0,0,0.2)"
+                        }}
+                    >
+                    </div>
+                )
             }
         </div>
     )

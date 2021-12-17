@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { COLORS, FONTS } from '../../assets/theme'
+import { COLORS } from '../../assets/theme'
 import styled from 'styled-components';
 import Logo from '../../assets/images/logoVertical.png';
-
+import { NavLink } from 'react-router-dom';
 
 
 const UpMenu = styled.div`
@@ -22,7 +22,7 @@ const Icon = styled.i`
 `;
 
 const Menu = styled.div`
-    position:absolute;
+    position:fixed;
     top:0;
     width:300px;
     height:100vh;
@@ -33,7 +33,8 @@ const Menu = styled.div`
     align-items:center;
     justify-content:center;
     overflow:hidden;
-    transform: translateX(${props => props.isOpen ? '0' : '-100%'});
+    transform: translateX(${props => props.isOpen ? '0' : '-120%'});
+    box-shadow: 4px 0px 15px rgba(0,0,0,0.2);
     transition:.3s ease-in-out;
 `;
 
@@ -45,18 +46,25 @@ const Line = styled.div`
     margin:20px 0;
 `;
 
-const MenuItem = styled.div`
+const MenuItem = styled(NavLink)`
     width:100%;
     display:flex;
     justify-content:flex-start;
     align-items:center;
     padding-left:80px;
     cursor:pointer;
+    color:black;
+    text-decoration:none;
     transition: .3s ease-in-out;
 
     &:hover{
         background-color:${COLORS.purple.primary};
         color:white;
+    };
+
+    &.active{
+        color:white;
+        background-color: ${COLORS.purple.primary};
     }
 `;
 
@@ -85,26 +93,31 @@ const Nav = () => {
                 <Icon className="fas fa-sign-out-alt" />
             </UpMenu>
             <Menu isOpen={isOpen}>
-                <CloseIcon className="fas fa-times-circle" onClick={() => { setIsOpen(!isOpen) }}/>
+                <CloseIcon className="fas fa-times-circle" onClick={() => { setIsOpen(!isOpen) }} />
                 <img src={Logo} alt="Logo-vertical" style={{ width: "200px" }} />
                 <Line />
-                <MenuItem>
+
+                <MenuItem to="/dashboard" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className="fas fa-tachometer-alt" style={{ marginRight: 10 }}></i>
                     <p>Tableau de bord</p>
                 </MenuItem>
-                <MenuItem>
+
+                <MenuItem to="/demand/tarte" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className="fas fa-birthday-cake" style={{ marginRight: 10 }}></i>
                     <p>Tartes</p>
                 </MenuItem>
-                <MenuItem>
+
+                <MenuItem to="/demand/livraison" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className="fas fa-truck" style={{ marginRight: 10 }}></i>
                     <p>Livraison</p>
                 </MenuItem>
-                <MenuItem>
+
+                <MenuItem to="/offres" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className="fas fa-percentage" style={{ marginRight: 10 }}></i>
                     <p>Offres</p>
                 </MenuItem>
-                <MenuItem>
+
+                <MenuItem to="/posts" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className="fas fa-bookmark" style={{ marginRight: 10 }}></i>
                     <p>Posts</p>
                 </MenuItem>

@@ -12,7 +12,7 @@ const Btn = styled.button`
     outline:none;
     color:  ${props => props.textColor};
     cursor: pointer;
-    margin: 0 5px 0 0;
+    margin: 0 5px 5px 0;
     transition: .3s ease-in-out;
     
     &:hover{

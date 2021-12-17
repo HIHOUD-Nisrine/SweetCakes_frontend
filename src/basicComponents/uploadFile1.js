@@ -3,8 +3,10 @@ import { COLORS } from "../assets/theme";
 
 const UploadFile = ({ data, setData, name }) => {
 
+
+
     const inputFile = useRef(null)
-    const [img, setImg] = useState(null);
+    const [imgUrl, setImgUrl] = useState(null);
 
     const updateValue = (e) => {
         setData({
@@ -12,8 +14,7 @@ const UploadFile = ({ data, setData, name }) => {
             [name]: e.target.files[0],
         });
 
-        // setImgUrl(URL.createObjectURL(e.target.files[0]));
-        setImg(e.target.files[0]);
+        setImgUrl(URL.createObjectURL(e.target.files[0]));
     }
 
     return (
@@ -22,7 +23,15 @@ const UploadFile = ({ data, setData, name }) => {
                 <div className="file-upload-select" onClick={() => inputFile.current.click()}>
                     <div className="file-select-button">Choose File</div>
                     <div className="file-select-name">
-                        { img !== null ? `${img.name.slice(0,15)}...` : "No file choosen..."}
+                        {
+                            imgUrl !== null ?
+                                `${data[name].name.slice(0,17)}...`
+                                :
+                                data[name] !== "" ?
+                                    data[name]
+                                    :
+                                    "No file choosen..."
+                        }
                     </div>
                     <input
                         type="file"
@@ -36,23 +45,24 @@ const UploadFile = ({ data, setData, name }) => {
 
             <div
                 style={{
-                    width: "300px",
-                    height: "300px",
-                    borderRadius: 25,
-                    boxShadow: "3px 5px 8px rgba(0,0,0,0.2)",
+                    width: "200px",
+                    // height: "300px",
+                    // borderRadius: 25,
+                    // boxShadow: "3px 5px 8px rgba(0,0,0,0.2)",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    overflow:"hidden",
-                    objectFit:"contain",
                     marginTop: 20,
                 }}
             >
-                {img !== null ?
+                {imgUrl !== null ?
 
-                    <img src={URL.createObjectURL(img)} alt={img.name} style={{ width:"100%" }}/>
+                    <img src={imgUrl} alt={data[name].name} style={{ width: "100%" }} />
                     :
-                    <i className="fas fa-images" style={{ color: COLORS.purple.primary, fontSize: 100 }}></i>
+                    data[name] !== "" ?
+                        <img src={`http://localhost:8080/uploads/${data[name]}`} alt={data[name]} style={{ width: "100%" }} />
+                        :
+                        <i className="fas fa-images" style={{ color: COLORS.purple.primary, fontSize: 100 }}></i>
                 }
 
             </div>

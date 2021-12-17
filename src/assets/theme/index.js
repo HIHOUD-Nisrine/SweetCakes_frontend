@@ -15,7 +15,7 @@ export const COLORS = {
 
 export const FONTS = {
     bigTitle: { fontSize: 25, fontWeight: "bold" },
-    mediumTitle: { fontSize: 20, fontWeight: "bold" },
+    mediumTitle: { fontSize: 16, fontWeight: "bold" },
     smallTitle: { fontSize: 13, fontWeight: "100" },
     btnText: { fontSize: 18, fontWeight: "300" },
     label: { fontSize: 15, fontWeight: "500", color: COLORS.gray },

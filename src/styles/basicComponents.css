@@ -136,7 +136,7 @@
 
 /* input type file */
 .file-upload .file-upload-select {
-    width: 300px;
+    width: 100%;
     display: block;
     color: white;
     cursor: pointer;
@@ -150,6 +150,7 @@
     background: #C59BF9;
     padding: 10px;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 .file-upload .file-upload-select .file-select-name {
     display: inline-block;
@@ -158,10 +159,10 @@
 .file-upload .file-upload-select:hover .file-select-button {
     background: #7121f1;
     color: #ffffff;
-    transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
 .file-upload .file-upload-select input[type="file"] {
     display: none;

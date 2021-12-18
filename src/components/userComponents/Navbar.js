@@ -10,6 +10,7 @@ import MenuItem1 from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import Modal from './modal';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom';
 
 import {
   Container,
@@ -125,6 +126,7 @@ const Navbar = ({ cart, setCart }) => {
           </MobileIcon>
 
           <Menu style={{ margin: 0, padding: 0, boxSizing: "border-box" }} open={showMobileMenu}>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -133,6 +135,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -141,6 +144,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -149,6 +153,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -157,14 +162,18 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
-            <MenuItem>
-              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                <div style={{ fontWeight: 'BOLD' }}>
-                  <FaTruck />
-                  Livraison
-                </div>
-              </MenuItemLink>
-            </MenuItem>
+
+            <NavLink to="/livraison">
+              <MenuItem>
+                <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                  <div style={{ fontWeight: 'BOLD' }}>
+                    <FaTruck />
+                    Livraison
+                  </div>
+                </MenuItemLink>
+              </MenuItem>
+            </NavLink>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -173,6 +182,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -181,6 +191,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <a className="icon i-favorite" onClick={handleClick}>
@@ -188,6 +199,7 @@ const Navbar = ({ cart, setCart }) => {
                 </a>
               </MenuItemLink>
             </MenuItem>
+
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <a className="icon i-localMall" onClick={handleClickCart}>
@@ -195,6 +207,7 @@ const Navbar = ({ cart, setCart }) => {
                 </a>
               </MenuItemLink>
             </MenuItem>
+            
           </Menu>
           <Menu1
             anchorEl={anchorEl}

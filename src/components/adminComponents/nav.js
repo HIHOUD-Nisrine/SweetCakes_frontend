@@ -85,12 +85,16 @@ const CloseIcon = styled.i`
 const Nav = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const logout = () => {
+        localStorage.setItem("loggedIn",false);
+        window.location.href="/login"
+    }
 
     return (
         <>
             <UpMenu>
                 <Icon className="fas fa-bars" onClick={() => { setIsOpen(!isOpen) }} />
-                <Icon className="fas fa-sign-out-alt" />
+                <Icon className="fas fa-sign-out-alt" onClick={logout}/>
             </UpMenu>
             <Menu isOpen={isOpen}>
                 <CloseIcon className="fas fa-times-circle" onClick={() => { setIsOpen(!isOpen) }} />

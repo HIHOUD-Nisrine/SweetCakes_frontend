@@ -7,7 +7,7 @@ import { COLORS } from "../../assets/theme";
 import Logo from "../../assets/images/logo.png";
 import { ReviewsSection } from "../userComponents/reviewsSection";
 import FormLivr from "./formLivr";
-import { Button,Marginer,SectionTitle } from '../../basicComponents';
+import { Button, Marginer, SectionTitle } from '../../basicComponents';
 
 
 
@@ -78,47 +78,48 @@ border-radius: 0.8rem;
 border: none;
 background: linear-gradient(to right,#130031 0%, #AB7CF7  90%);
 backdrop-filter: blur(25px);
+margin:0;
 
 `;
 
 const livraison = () => {
-    return (
-        <>
-            <TopContainer >
-                <BackgroundFilter>
-                    <Navbar />
-                    <Marginer direction="vertical" margin="8em" />
-                    <img src={Logo} style={{ width: '250px', padding: '30px' }} />
-                    <MotivationalText>
-                    Vous avez besoin de livrer vos tartes pour vos évenements ? Nous sommes 
-                    là pour vous aidez à etre toujours à temps</MotivationalText>
-                    <Diiv>
-                        <Button width="250px" textColor="white" bgColor={COLORS.purple} text="Livrer vos commandes" type="button" />
-                        
-                    </Diiv>
-                </BackgroundFilter>
-                
-            </TopContainer>
-            <Marginer direction="vertical" margin="3em" />
-            <SectionTitle>Demande de Livraison<HorizontalRule /></SectionTitle>
-            <FormLivr/>
-            <Marginer direction="vertical" margin="3em" />
-            <SectionTitle>Messages de nos clients<HorizontalRule /></SectionTitle>
-            <Marginer direction="vertical" margin="3em" />
-            <ReviewsSection />
+  return (
+    <>
+      <TopContainer >
+        <BackgroundFilter>
+          <Navbar />
+          <Marginer direction="vertical" margin="8em" />
+          <img src={Logo} style={{ width: '250px', padding: '30px' }} />
+          <MotivationalText>
+            Vous avez besoin de livrer vos tartes pour vos évenements ? Nous sommes
+            là pour vous aidez à etre toujours à temps</MotivationalText>
+          <Diiv>
+            <Button width="250px" textColor="white" bgColor={COLORS.purple} text="Livrer vos commandes" type="button" />
 
-            <Marginer direction="vertical" margin="3em" />
+          </Diiv>
+        </BackgroundFilter>
 
-            <Box>
-                <LogoImg src={Logo} />
-                <h2 style={{
-                    color: "white",
-                    textAlign: "center"
-                }}>
-                    SweetCakes @ Copyright 2021
-                </h2>
-            </Box>
-        </>
-    );
+      </TopContainer>
+      <Marginer direction="vertical" margin="3em" />
+      <SectionTitle>Demande de Livraison<HorizontalRule /></SectionTitle>
+      <FormLivr />
+      <Marginer direction="vertical" margin="3em" />
+      <SectionTitle>Messages de nos clients<HorizontalRule /></SectionTitle>
+      <Marginer direction="vertical" margin="3em" />
+      <ReviewsSection />
+
+      <Marginer direction="vertical" margin="3em" />
+
+      <Box>
+        <LogoImg src={Logo} />
+        <h2 style={{
+          color: "white",
+          textAlign: "center"
+        }}>
+          SweetCakes @ Copyright 2021
+        </h2>
+      </Box>
+    </>
+  );
 };
 export default livraison;

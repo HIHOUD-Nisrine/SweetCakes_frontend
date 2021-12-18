@@ -75,7 +75,7 @@ const EditPosts = () => {
     let params = useParams();
 
     const options = {
-        "categories": ["Tarte", "Cupcake", "Magnum", "Popcake", "Lolipop", "Sable"],
+        "categories": ["Cakes", "Cupcakes", "Magnum", "Popcakes", "Lolipops", "Sable"],
         "gout": ["Chockolat", "Vanille", "Franboise"],
         "nbPiece": [4, 6, 12],
         "evenement": ["Mariage", "Anniversaire", "Fiancaille"],
@@ -317,11 +317,11 @@ const EditPosts = () => {
                 </div>
                 <UpdateFile name="image" data={data} setData={setData} url="post"/>
                 <form onSubmit={(e) => editArtcile(e)}>
-                    {data.categorie === "Tarte" && (CategorieCake())}
-                    {data.categorie === "Cupcake" && (CategorieCupcake())}
+                    {data.categorie === "Cakes" && (CategorieCake())}
+                    {data.categorie === "Cupcakes" && (CategorieCupcake())}
                     {data.categorie === "Magnum" && (CategorieMagnum())}
-                    {data.categorie === "Lolipop" && (CategorieLolipops())}
-                    {data.categorie === "Popcake" && (CategoriePopCakes())}
+                    {data.categorie === "Lolipops" && (CategorieLolipops())}
+                    {data.categorie === "Popcakes" && (CategoriePopCakes())}
                     {data.categorie === "Sable" && (CategorieSable())}
                     {data.categorie !== "Choose" &&
                         <Button text="Modifier" width="150px" bgColor={COLORS.purple} textColor={COLORS.white} type="submit" />

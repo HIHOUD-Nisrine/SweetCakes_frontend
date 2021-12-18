@@ -71,7 +71,7 @@ export const MenuItemLink = styled.a `
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding: 0.5rem 1.25rem;
+  padding: 0rem 1.25rem;
   color: #ffffff;
   font-family: sans-serif;
   font-size: 1rem;
@@ -82,8 +82,7 @@ export const MenuItemLink = styled.a `
   &:hover {
     color: #fff;
     background-color: rgba(0,0,0,0.3);
-    border-radius:16px;
-    height:70px;
+  
     div {
       svg {
         fill: #ffffff;

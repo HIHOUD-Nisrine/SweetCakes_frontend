@@ -33,7 +33,7 @@ const InputS = styled.input`
 `;
 
 
-const Input = ({ label, type = "text", name, data, setData, disabled = false, width, step,icon = "", placeholder = "", onClickIcon }) => {
+const Input = ({ label, type = "text", name, data, setData, disabled = false, width, step,icon = "", placeholder = "", onClickIcon,labelColor=COLORS.gray }) => {
 
     const updateValue = (e) => {
         setData({
@@ -52,6 +52,7 @@ const Input = ({ label, type = "text", name, data, setData, disabled = false, wi
             <p
                 style={{
                     ...FONTS.label,
+                    color:labelColor,
                     marginBottom: "5px"
                 }}
             >

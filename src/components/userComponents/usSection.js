@@ -114,27 +114,27 @@ const UsSection = () => {
                 <First style={{ flex: 1 }}>
                     <Oussama style={{ flex: 1}} src={oussama} />
                     <p style={{ marginTop:'2px',flex: 1,fontWeight:'BOLD',fontSize:'18px',textAlign: 'center'}}>AOULAD LAHCENE Oussama</p>
-                    <p style={{ flex: 1 ,textAlign: 'center'}}>Responsable marketing et média</p>
+                    <p style={{ flex: 1 ,textAlign: 'center'}}>Responsable IT</p>
                 </First>
                 <Second style={{ flex: 1 }}>
                     <Ayat src={aya} />
                     <p style={{ marginTop:'2px', flex: 1,fontWeight:'BOLD',fontSize:'18px',textAlign: 'center'}}>ANSSAIEN Ayat</p>
-                    <p style={{ flex: 1,textAlign: 'center' }}>Chef patiserie</p>
+                    <p style={{ flex: 1,textAlign: 'center' }}>Chef pâtisserie</p>
                 </Second>
                 <Third style={{ flex: 1 }}>
                     <Nisrine src={nisrine} />
                     <p style={{  marginTop:'2px',flex: 1,fontWeight:'BOLD',fontSize:'18px',textAlign: 'center'}}>HIHOUD Nisrine</p>
-                    <p style={{ flex: 1,textAlign: 'center' }}>Responsable financière</p>
+                    <p style={{ flex: 1,textAlign: 'center' }}>Responsable marketing et média</p>
                 </Third>
                 <Fourth style={{ flex: 1 }}>
                     <Chaimae src={chaimae} />
                     <p style={{ marginTop:'2px', flex: 1,fontWeight:'BOLD',fontSize:'18px',textAlign: 'center'}}>ECH-CHARFI Chaimae</p>
-                    <p style={{ flex: 1,textAlign: 'center'}}>Responsable marketing et media</p>
+                    <p style={{ flex: 1,textAlign: 'center'}}>Aide pâtisserie</p>
                 </Fourth>
                 <Fifth style={{ flex: 1 }}>
                     <Chaymae src={chaymae} />
                     <p style={{ marginTop:'2px', flex: 1,fontWeight:'BOLD',fontSize:'18px',textAlign: 'center'}}>MESTOUR Chaymae</p>
-                    <p style={{ flex: 1 ,textAlign: 'center'}}>Responsible transport et logistique</p>
+                    <p style={{ flex: 1 ,textAlign: 'center'}}>Responsable marketing et média</p>
                 </Fifth>
             </Container>
         </>

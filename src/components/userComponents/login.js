@@ -30,7 +30,7 @@ function Login({ loginF }) {
         e.preventDefault();
         console.log(login)
 
-        axios.post('http://localhost:8080/api/login', login).then(res => {
+        axios.post('http://localhost:8090/api/login', login).then(res => {
             if (res.data) {
                 localStorage.setItem("loggedIn",true);
                 window.location.href = "/dashboard"

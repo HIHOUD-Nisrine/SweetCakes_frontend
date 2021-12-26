@@ -101,7 +101,7 @@ export default function FormLivr(props) {
 
   function AddDeliveryDemand(e) {
     e.preventDefault();
-    axios.post("http://localhost:8080/api/delivery_demands/add", data).then(res => {
+    axios.post("http://localhost:8090/api/delivery_demands/add", data).then(res => {
       console.log(res);
     });
   }
@@ -112,7 +112,7 @@ export default function FormLivr(props) {
         <form onSubmit={AddDeliveryDemand}>
           <MainContainer style={{ flex: 2 }}>
             <InputsContainer style={{ flex: 1 }}>
-              <h3>Informations de l'emmeteur</h3>
+              <h3>Informations de l'émetteur</h3>
               <Up style={{ flex: 1 }}>
                 <Input label="Nom Complet" width="250px" name="nom_emetteur" setData={setData} data={data} />
                 <Input label="Téléphone" width="250px" name="telephone_emetteur" setData={setData} data={data} />
@@ -130,8 +130,8 @@ export default function FormLivr(props) {
               <h3>Informations de livraison</h3>
               <Down style={{ flex: 1 }}>
                 <Left>
-                  <Input type="date" label="Date" width="300px" name="date_livraison" data={data} setData={setData} />
-                  <Input type="time" step="2" label="Time" width="300px" name="heure_livraison" setData={setData} data={data} />
+                  <Input type="date" label="Date de livraison" width="300px" name="date_livraison" data={data} setData={setData} />
+                  <Input type="time" step="2" label="heure de livraison" width="300px" name="heure_livraison" setData={setData} data={data} />
                   <Input type="time" step="2" label="Marge" width="300px" name="marge" setData={setData} data={data} />
 
                 </Left>

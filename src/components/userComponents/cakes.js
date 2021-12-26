@@ -16,7 +16,7 @@ import TopSection from './topSection';
 
 function Cakes() {
     const optionsCategory = ["Cakes","Cupcakes","Magnum","Popcakes","Sable","Lolipops"];
-    const optionsEvent = ["Tarte du Mariage","Fiancaille","Anniversaire"];
+    const optionsEvent = ["Mariage","Fiancaille","Anniversaire"];
     const optionsDispo = ["Oui","Non"];
     const [search, setSearch] = useState({"category":"","event":"","disponibility":""});
     //Pagination : max cakes per page
@@ -28,7 +28,7 @@ function Cakes() {
     const [cakes, setCakes] = useState([]);
     //Posts  From API 
     useEffect(()=>{
-        axios.get('http://localhost:8080/api/posts')
+        axios.get('http://localhost:8090/api/posts')
         .then(res=>{
                 setCakes(res.data);
                 console.log('UP:',res.data)
@@ -104,7 +104,8 @@ function Cakes() {
         "address": "",
         "ville": "",
         "date_livraison": "",
-        "prix":"550"
+        "prix":"",
+        "statut":"non traité"
 
     });
     const optionsVille = ["Fes","Tanger","Tetouan","asfi","casa","martil"];
@@ -180,36 +181,36 @@ function Cakes() {
         </form>
         <div className="wrapper">
         {cakes.filter((val)=>{
-            if(search.category==="Choose"||search.event==="Choose" || search.disponibility==="Choose"){
+            if(search.category=="Choose"||search.event=="Choose" || search.disponibility=="Choose"){
                 return val}
             //Case no select no search
-            if(search.category===""&&search.event==="" && search.disponibility===""){
+            if(search.category==""&&search.event=="" && search.disponibility==""){
                 return val}
             //Case  just 1 select 
-            if(search.category!="" && search.event===""&&search.disponibility===""){
-                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase())){
+            if(search.category!="" && search.event==""&&search.disponibility==""){
+                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase())){
                 return val}}
 
-            if(search.category==="" && search.event!=""&&search.disponibility===""){
-                if((val.evenement.toLowerCase()===(search.event).toLocaleLowerCase())){
+            if(search.category=="" && search.event!=""&&search.disponibility==""){
+                if((val.evenement.toLowerCase()==(search.event).toLocaleLowerCase())){
                     return val}}
             
-            if(search.category==="" && search.event===""&&search.disponibility!=""){
-                if(val.dispo===(search.disponibility==='Oui'?'1':'0')){
+            if(search.category=="" && search.event==""&&search.disponibility!=""){
+                if(val.dispo==(search.disponibility=='Oui'?'1':'0')){
                     return val}}
             //Case  2 select 
-            if(search.category!="" && search.event!=""&&search.disponibility===""){
-                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase()) && (val.evenement.toLowerCase()===((search.event).toLocaleLowerCase()))){
+            if(search.category!="" && search.event!=""&&search.disponibility==""){
+                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase()) && (val.evenement.toLowerCase()==((search.event).toLocaleLowerCase()))){
                 return val}}
-            if(search.category!="" && search.event===""&&search.disponibility!=""){
-                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase()) &&(val.dispo===(search.disponibility==='Oui'?'1':'0'))){
+            if(search.category!="" && search.event==""&&search.disponibility!=""){
+                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase()) &&(val.dispo==(search.disponibility=='Oui'?'1':'0'))){
                  return val}}
-            if(search.category==="" && search.event!=""&&search.disponibility!=""){
-                if((val.dispo===(search.disponibility==='Oui'?'1':'0')) && (val.evenement.toLowerCase()===((search.event).toLocaleLowerCase()))){
+            if(search.category=="" && search.event!=""&&search.disponibility!=""){
+                if((val.dispo==(search.disponibility=='Oui'?'1':'0')) && (val.evenement.toLowerCase()==((search.event).toLocaleLowerCase()))){
                     return val}}
             //Case  3 select 
             if(search.category!="" && search.event!=""&&search.disponibility!=""){
-                if((val.categorie.toLowerCase()===(search.category).toLocaleLowerCase()) &&(val.dispo===(search.disponibility==='Oui'?'1':'0')) && (val.evenement.toLowerCase().includes((search.event).toLocaleLowerCase()))){
+                if((val.categorie.toLowerCase()==(search.category).toLocaleLowerCase()) &&(val.dispo==(search.disponibility=='Oui'?'1':'0')) && (val.evenement.toLowerCase().includes((search.event).toLocaleLowerCase()))){
                 return val}}
             
         } ).slice(pagesVisited, pagesVisited + cakesPerPage).map((val,key)=>{

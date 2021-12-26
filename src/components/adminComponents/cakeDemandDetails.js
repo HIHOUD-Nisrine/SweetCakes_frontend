@@ -34,7 +34,7 @@ function CakeDemandDetails({ demand, setDemand }) {
 
 
     useEffect(() => {
-        axios.get("http://localhost:8080/api/cakes_demands/" + demand.id_demand + "/articles").then(
+        axios.get("http://localhost:8090/api/cakes_demands/" + demand.id_demand + "/articles").then(
             res => {
                 console.log(res.data)
                 if (res.data.length > 0)
@@ -44,7 +44,7 @@ function CakeDemandDetails({ demand, setDemand }) {
     }, [])
 
     const save = () => {
-        axios.post("http://localhost:8080/api/cakes_demands/" + demand.id_demand + "/update", demand)
+        axios.post("http://localhost:8090/api/cakes_demands/" + demand.id_demand + "/update", demand)
 
     }
     return (

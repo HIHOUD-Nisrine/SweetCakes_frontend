@@ -54,10 +54,10 @@ function TopSection({ cart, setCart }) {
                 <Marginer direction="vertical" margin="8em" />
                 <img src={Logo} style={{ width: '250px', padding: '30px' }} />
                 <MotivationalText>
-                    Vous avez besoin de livrer vos tartes pour vos évenements ? Nous sommes
-                    là pour vous aidez à etre toujours à temps</MotivationalText>
+                    Vous avez besoin des tartes pour vos évenements ? Nous sommes
+                    là pour vous aidez </MotivationalText>
                 <Diiv>
-                    <Button width="250px" textColor="white" bgColor={COLORS.purple} text="Livrer vos commandes" type="button" />
+                    <Button width="250px" textColor="white" bgColor={COLORS.purple} text="Découvrez plus" type="button" />
 
                 </Diiv>
             </BackgroundFilter>

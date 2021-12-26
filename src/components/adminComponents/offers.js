@@ -123,8 +123,8 @@ const EmptyCard = styled.div`
 `;
 
 const Offers = () => {
-    const URL = "http://localhost:8080/api/";
-    const IMAGEPATH = "http://localhost:8080/uploads/";
+    const URL = "http://localhost:8090/api/";
+    const IMAGEPATH = "http://localhost:8090/uploads/";
 
     const offerObj = {
         'id_offer': 0,

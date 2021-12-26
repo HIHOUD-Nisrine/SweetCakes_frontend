@@ -35,19 +35,19 @@ function ContactPage() {
             <ContactPageStyled >
                 <InnerLayout className={'contact-section'}>
                     <div className="right-content">
-                        <ContactItem title={'Phone'} icon={phone} cont1={'+66-789675637'} cont2={'07663520283'} />
-                        <ContactItem title={'Email'} icon={email} cont1={'loremipsum@gmail.com'} cont2={'info.lorem.ipsum@gmail.com'} />
-                        <ContactItem title={'Address'} icon={location} cont1={'27 Aldrich Road, London, England'} cont2={'United Kingdom'} />
+                        <ContactItem title={'Téléphone'} icon={phone} cont1={'+66-789675637'} cont2={'07663520283'} />
+                        <ContactItem title={'Email'} icon={email} cont1={'sweet_cakes@gmail.com'} cont2={'info.sweet_cakes@gmail.com'} />
+                        <ContactItem title={'Adresse'} icon={location} cont1={'19 Avenu Al Joulan , Tétouan'} cont2={'Maroc'} />
 
                     </div>
                     <div className="left-content">
                         <form className="form" id="form" ref={form} onSubmit={sendEmail}>
                             <div className="form-field">
-                                <Input label="Full Name" width="400px" name="Name" setData={setData} data={data} />
+                                <Input label="Nom Complet" width="400px" name="Name" setData={setData} data={data} />
                             </div>
                         
                             <div className="form-field">
-                                <Input label="Phone" width="400px" name="Phone" setData={setData} data={data} />
+                                <Input label="Téléphone" width="400px" name="Phone" setData={setData} data={data} />
                             </div>
                             <div className="form-field">
                                 <TextArea label="Message" name="Message" rows="7" setData={setData} data={data} />

@@ -39,7 +39,7 @@ function CakeDemandsTable({ statut, date_livraison }) {
         setDataConsulte(data.find(x => x.id_demand === id));
     }
     useEffect(() => {
-        axios.get('http://localhost:8080/api/cakes_demands').then(
+        axios.get('http://localhost:8090/api/cakes_demands').then(
             (res) => {
                 console.log("resdata => "+res.data);
                 if (res.data.length > 0)

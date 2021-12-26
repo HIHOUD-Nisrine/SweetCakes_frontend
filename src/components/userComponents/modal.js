@@ -7,21 +7,23 @@ import axios from 'axios';
 
 
 function Modal({ setOpenModal ,categorie , image, price, post,cart,setCart}) {
-  
+  const IMAGEPATH = "http://localhost:8090/uploads/";
+
   const addToBD= (article,demand) => {
-    axios.post('http://localhost:8080/api/cakes_demand/add',
+    demand.prix=article.prix;
+    axios.post('http://localhost:8090/api/cakes_demand/add',
     { ...demand }).then(res => {
-       axios.get('http://localhost:8080/api/cakes_demand/recentOne').then(ress => {
+       axios.get('http://localhost:8090/api/cakes_demand/recentOne').then(ress => {
               article.demand.id_demand=ress.data
               article.posts.id_post=post
               article.categorie=categorie
-                axios.post('http://localhost:8080/api/articles/add', {...article}).then(resp => {
+                axios.post('http://localhost:8090/api/articles/add', {...article}).then(resp => {
                     console.log('added:',article);
                 });
            });
     
     });
-    //window.location.reload();
+    window.location.reload();
   }
 
   const [demand, setDemand] = useState({
@@ -29,7 +31,9 @@ function Modal({ setOpenModal ,categorie , image, price, post,cart,setCart}) {
     "telephone": "",
     "address": "",
     "ville": "",
-    "date_livraison": ""
+    "date_livraison": "",
+    "prix":"",
+    "statut":"non traité"
   });
   const [data, setData] = useState({
     "demand":{"id_demand": ""},
@@ -196,7 +200,7 @@ useEffect(() => {
                   <Input label="Couleur" name="coleur" data={data} setData={setData} width="170px" />
                 </div>
                 <div style={{ paddingTop: "2px" }}>
-                  <Button text="Ajouter au panier" width="170px" bgColor={COLORS.purple} textColor={COLORS.white} />
+                  <Button text="Ajouter au panier" width="170px" onClick={() => addToCart(data)} bgColor={COLORS.purple} textColor={COLORS.white} />
                   <Button text="envoyer Demande" width="170px" onClick={() => addToBD(data,demand)} bgColor={COLORS.purple} textColor={COLORS.white} />
                 </div>
               </div>)}

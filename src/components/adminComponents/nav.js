@@ -87,7 +87,7 @@ const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
     const logout = () => {
         localStorage.setItem("loggedIn",false);
-        window.location.href="/login"
+        window.location.href="/"
     }
 
     return (
@@ -108,7 +108,7 @@ const Nav = () => {
 
                 <MenuItem to="/demand/tarte" onClick={() => { setIsOpen(!isOpen) }}>
                     <i className="fas fa-birthday-cake" style={{ marginRight: 10 }}></i>
-                    <p>Tartes</p>
+                    <p>Commandes</p>
                 </MenuItem>
 
                 <MenuItem to="/demand/livraison" onClick={() => { setIsOpen(!isOpen) }}>

@@ -48,7 +48,7 @@ const FromSections = styled.div`
 
 const AddPosts = () => {
 
-    const URL = "http://localhost:8080/api/";
+    const URL = "http://localhost:8090/api/";
     let navigate = useNavigate();
 
     // const saveToLocal = () => {
@@ -122,7 +122,7 @@ const AddPosts = () => {
             if(res.data.inserted){
                 setTimeout(() => {
                     navigate(`/posts`);
-                },1000)
+                },3000)
             }
             console.log("result : ", res);
         });

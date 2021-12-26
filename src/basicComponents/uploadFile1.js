@@ -60,7 +60,7 @@ const UploadFile = ({ data, setData, name }) => {
                     <img src={imgUrl} alt={data[name].name} style={{ width: "100%" }} />
                     :
                     data[name] !== "" ?
-                        <img src={`http://localhost:8080/uploads/${data[name]}`} alt={data[name]} style={{ width: "100%" }} />
+                        <img src={`http://localhost:8090/uploads/${data[name]}`} alt={data[name]} style={{ width: "100%" }} />
                         :
                         <i className="fas fa-images" style={{ color: COLORS.purple.primary, fontSize: 100 }}></i>
                 }

@@ -74,14 +74,14 @@ export function ReviewsSection(props) {
         <Slider>
         <StyledSlide index={0}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              reviewText=" I very much enjoyed working with SweetCakes and the team - they have an excellent grasp of their subject, and have created something great for us."
               username="ECH-CHARFI Chaimae"
               userImgUrl={User1Img}
             />
           </StyledSlide>
           <StyledSlide index={1}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              reviewText=" I very much enjoyed working with SweetCakes and the team - they have an excellent grasp of their subject, and have created something great for us."
               username="ANSSAIEN Ayat"
               userImgUrl={User2Img}
             />
@@ -89,21 +89,21 @@ export function ReviewsSection(props) {
           
           <StyledSlide index={2}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              reviewText=" I very much enjoyed working with SweetCakes and the team - they have an excellent grasp of their subject, and have created something great for us."
               username="MESTOUR Chaymae"
               userImgUrl={User3Img}
             />
           </StyledSlide>
           <StyledSlide index={3}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              reviewText=" I very much enjoyed working with SweetCakes and the team - they have an excellent grasp of their subject, and have created something great for us."
               username="HIHOUD Nisrine"
               userImgUrl={User4Img}
             />
           </StyledSlide>
           <StyledSlide index={4}>
             <ReviewCard
-              reviewText=" I very much enjoyed working with Beema and the team - they have an excellent grasp of their subject, and have created something great for us."
+              reviewText=" I very much enjoyed working with SweetCakes and the team - they have an excellent grasp of their subject, and have created something great for us."
               username="AOULAD LAHCENE Oussama"
               userImgUrl={User5Img}
             />

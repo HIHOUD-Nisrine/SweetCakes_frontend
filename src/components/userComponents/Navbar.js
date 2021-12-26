@@ -40,6 +40,8 @@ const Navbar = ({ cart, setCart }) => {
   const [category, setCategory] = useState("");
   const [post, setPost] = useState("");
   const [price, setPrice] = useState("");
+  const IMAGEPATH = "http://localhost:8090/uploads/";
+
 
   /*Favoris */
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -73,17 +75,23 @@ const Navbar = ({ cart, setCart }) => {
     setAnchorElCart(null);
   };
   const addToBD = (article, demand) => {
-    axios.post('http://localhost:8080/api/cakes_demand/add',
+    var priceDemand=0;
+    console.log('prix',demand.prix);
+    for (var i = 0; i < article.length; i++) {
+      priceDemand=priceDemand+article[i].prix;
+    }
+    demand.prix=priceDemand;
+    axios.post('http://localhost:8090/api/cakes_demand/add',
       { ...demand }).then(res => {
-        axios.get('http://localhost:8080/api/cakes_demand/recentOne').then(ress => {
+        axios.get('http://localhost:8090/api/cakes_demand/recentOne').then(ress => {
           console.log("articles :", article)
           for (var i = 0; i < article.length; i++) {
             article[i].demand.id_demand = ress.data;
             console.log('One article:', article[i])
-            axios.post('http://localhost:8080/api/articles/add', { ...article[i] }).then(resp => {
+            axios.post('http://localhost:8090/api/articles/add', { ...article[i] }).then(resp => {
               console.log('added:', article[i]);
               localStorage.removeItem("cartCakes");
-              localStorage.removeItem("Demand");
+              //localStorage.removeItem("Demand");
               setCart([]);
             });
           }
@@ -126,7 +134,7 @@ const Navbar = ({ cart, setCart }) => {
           </MobileIcon>
 
           <Menu style={{ margin: 0, padding: 0, boxSizing: "border-box" }} open={showMobileMenu}>
-
+          <NavLink to="/">
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -135,7 +143,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
-
+          </NavLink>
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -153,7 +161,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
-
+            <NavLink to="/cakes">
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <div style={{ fontWeight: 'BOLD' }}>
@@ -162,6 +170,7 @@ const Navbar = ({ cart, setCart }) => {
                 </div>
               </MenuItemLink>
             </MenuItem>
+            </NavLink>
 
             <NavLink to="/livraison">
               <MenuItem>
@@ -192,6 +201,17 @@ const Navbar = ({ cart, setCart }) => {
               </MenuItemLink>
             </MenuItem>
 
+            <NavLink to="/login">
+            <MenuItem>
+              <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
+                <div style={{ fontWeight: 'BOLD' }}>
+                  <FaPhoneAlt />
+                  Login
+                </div>
+              </MenuItemLink>
+            </MenuItem>
+            </NavLink>
+            
             <MenuItem>
               <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                 <a className="icon i-favorite" onClick={handleClick}>
@@ -235,7 +255,7 @@ const Navbar = ({ cart, setCart }) => {
                           <CardHeader
                             sx={{ mt: -1, ml: -2 }}
                             avatar={
-                              <Avatar sx={{ height: '50px', width: '50px' }} alt={listItem.categorie} src={listItem.image} />
+                              <Avatar sx={{ height: '50px', width: '50px' }} alt={listItem.categorie} src={IMAGEPATH+listItem.image} />
                             }
                             title={listItem.evenement}
                             subheader={listItem.prix}
@@ -243,7 +263,7 @@ const Navbar = ({ cart, setCart }) => {
                         </ThemeProvider>
                         <CardActions sx={{ ml: 25, mt: -7 }}>
                           <ThemeProvider theme={theme}>
-                            <Button width="120px" textColor={COLORS.white} onClick={() => { setCategory(listItem.categorie); setImgCake(listItem.image); setPost(listItem.id_post); setPrice(listItem.prix); setModalOpen(true) }} bgColor={COLORS.purple} text="Commander" />                            </ThemeProvider>
+                            <Button width="120px" textColor={COLORS.white} onClick={() => { setCategory(listItem.categorie); setImgCake(IMAGEPATH + listItem.image); setPost(listItem.id_post); setPrice(listItem.prix); setModalOpen(true) }} bgColor={COLORS.purple} text="Commander" />                            </ThemeProvider>
                         </CardActions>
                       </div>
                     </MenuItem1>

@@ -7,7 +7,7 @@ export default function useAuth(initialValue) {
 
     function login(userCredentials) {
         setTimeout(() => {
-            axios.post('http://localhost:8080/api/login', userCredentials).then(res => {
+            axios.post('http://localhost:8090/api/login', userCredentials).then(res => {
                 if (res.data){
                     setIsAuth(true);
                     window.location.href = "/dashboard"

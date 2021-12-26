@@ -135,7 +135,7 @@ const Home = () => {
     const[Offers,setOffers]=useState([]);
 
     useEffect(()=>{
-        axios.get('http://localhost:8080/api/offers')
+        axios.get('http://localhost:8090/api/offers')
         .then(res=>{
             setOffers(res.data);
             })
@@ -157,8 +157,7 @@ const Home = () => {
                     <Marginer direction="horizontal" margin="1em" />
                     <h2 style={{color:'#C59BF9'}}>{DM.prix_final} DHs</h2>
                     <Marginer direction="horizontal" margin="6em" />
-                    <strong style={{color:'white'}}>Du {DM.date_debut} Au {DM.date_fin}</strong>
-            </div>
+                    <strong style={{color:'white'}}>Du {DM.date_debut.slice(0, 10)} Au {DM.date_fin.slice(0, 10)}</strong>            </div>
         </div> );
 })}
             <TopContainer >

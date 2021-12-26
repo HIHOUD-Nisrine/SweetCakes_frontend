@@ -21,7 +21,7 @@ function DelivryDemandDetails({ demand, setDemand }) {
 
 
     const save = () =>{
-         axios.post("http://localhost:8080/api/delivery_demands/" + demand.id_demand + "/update", demand)
+         axios.post("http://localhost:8090/api/delivery_demands/" + demand.id_demand + "/update", demand)
 
     }
 

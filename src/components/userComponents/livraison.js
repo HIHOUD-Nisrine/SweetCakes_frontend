@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import '../../index.css';
 import BackgroundImg from "../../assets/images/livraison.jpg";
+import CarImg from "../../assets/images/car.png";
 import { COLORS } from "../../assets/theme";
 import Logo from "../../assets/images/logo.png";
 import { ReviewsSection } from "../userComponents/reviewsSection";
@@ -82,6 +83,18 @@ margin:0;
 
 `;
 
+const CarSection = styled.div`
+  margin-top:30px;
+  width:100%;
+  height:100vh;
+  background-image: url(${CarImg});
+  background-size: 60%;
+  background-position: right;
+  background-repeat: no-repeat;
+  display:flex;
+  align-items:center;
+`;
+
 const livraison = () => {
   return (
     <>
@@ -100,6 +113,32 @@ const livraison = () => {
         </BackgroundFilter>
 
       </TopContainer>
+
+      <CarSection>
+        <div
+          style={{
+            width:"30%",
+            backgroundColor:COLORS.purple.primary,
+            marginLeft:"50px",
+            padding:"30px",
+            borderRadius:"20px",
+            color:"white"
+          }}
+        >
+          <h1>Livraison</h1>
+          <p>
+            Notre service de livrasion et de grande qualite 
+            voiture tres bien equipe avec le materiel pour transporter
+            vos commandes sans aucun problemes
+          </p>
+          <ul>
+            <li>Refrigirateur interne</li>
+            <li>Support plus de 10 tartes</li>
+            <li>Marge de retard moins de 20 min</li>
+            <li>Zone de livrasion jusqu'au 60 km</li>
+          </ul>
+        </div>
+      </CarSection>
       <Marginer direction="vertical" margin="3em" />
       <SectionTitle>Demande de Livraison<HorizontalRule /></SectionTitle>
       <FormLivr />

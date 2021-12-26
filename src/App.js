@@ -28,7 +28,6 @@ function App() {
         <Route path="/livraison" exact element={<Livraison />} />    
         <Route path="/cakes" exact element={<Cakes />} />    
         <Route path="/login" exact element={<Login />} />    
-
         <Route path="/demand/tarte" exact element={<DemandCake />} />
         <Route path="/demand/livraison" exact element={<DemandDilevry />} />
         <Route path="/offres" exact element={<Offers />} />

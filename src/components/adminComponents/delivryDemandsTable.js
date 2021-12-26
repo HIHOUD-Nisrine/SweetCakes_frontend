@@ -42,7 +42,7 @@ function DelivryDemandsTable({ statut, date_livraison }) {
 
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/delivery_demands').then(
+        axios.get('http://localhost:8090/api/delivery_demands').then(
             (res) => {
                 console.log(res.data);
                 if (res.data.length > 0)

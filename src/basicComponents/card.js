@@ -8,7 +8,7 @@ import Modal from '../components/userComponents/modal'
 
 const Card = ({ cake, favorites, setFavorites, cart, setCart }) => {
 
-  const IMAGEPATH = "http://localhost:8080/uploads/";
+  const IMAGEPATH = "http://localhost:8090/uploads/";
 
   const [modalOpen, setModalOpen] = useState(false);
   const addToFavorite = (cake) => {
@@ -45,9 +45,9 @@ const Card = ({ cake, favorites, setFavorites, cart, setCart }) => {
         <p className="infor" style={{ ...FONTS.smallTitle }}>
           Categorie : {cake.categorie}
           {
-            cake.poids != null ?
+            cake.poids != 0 ?
               (<p >Poids : {cake.poids} </p>) :
-              (<p >Nombre de parts : {cake.nombre_part} </p>)
+              (cake.nombre_part != 0 ?<p >Nombre de parts : {cake.nombre_part} </p>:"")
           }
           {
             cake.dispo == 1 ?

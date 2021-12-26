@@ -27,8 +27,8 @@ const InputFile = styled.input`
 
 const UpdateFile = ({ data, setData, name ,url}) => {
 
-    const URL = "http://localhost:8080/api/";
-    const IMAGEPATH = "http://localhost:8080/uploads/";
+    const URL = "http://localhost:8090/api/";
+    const IMAGEPATH = "http://localhost:8090/uploads/";
     const inputFile = useRef(null)
 
     const updateValue = (e) => {

@@ -27,14 +27,15 @@ const addToCart= (data) => {
   }
 
   const addToBD= (article,demand) => {
-    axios.post('http://localhost:8080/api/cakes_demand/add',
+    demand.prix=article.prix;
+    axios.post('http://localhost:8090/api/cakes_demand/add',
     { ...demand }).then(res => {
-       axios.get('http://localhost:8080/api/cakes_demand/recentOne').then(ress => {
+       axios.get('http://localhost:8090/api/cakes_demand/recentOne').then(ress => {
                 article.demand.id_demand=ress.data
                 const reader = new FileReader();
                 reader.addEventListener( "load",() => {
                 article.image=reader.result;
-                axios.post('http://localhost:8080/api/articles/add', {...article}).then(resp => {
+                axios.post('http://localhost:8090/api/articles/add', {...article}).then(resp => {
                     console.log('added:',article);
                 });
                 });
